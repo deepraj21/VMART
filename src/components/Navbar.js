@@ -31,7 +31,7 @@ let data = useCart();
 
   return (
     <div>
- <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+ <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
   <div className="container-fluid">
     <Link className="navbar-brand fs-1 fst-italic" to="/">VMART</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,13 +51,13 @@ let data = useCart();
       </ul>
       {(!localStorage.getItem("authToken")) ?
       <div className='d-flex'>
-          <Link className="btn bg-white text-success mx-1" to="/login">Login</Link>
-          <Link className="btn bg-white text-success mx-1" to="/creatuser">SignUp</Link>
+          <Link className="btn bg-white text-primary mx-1" to="/login">Login</Link>
+          <Link className="btn bg-white text-primary mx-1" to="/creatuser">SignUp</Link>
 
           </div>
           : 
           <div>
-          <div className='btn bg-white text-success mx-2' onClick={()=>{setCartView(true)}}>
+          <div className='btn bg-white text-primary mx-2' onClick={()=>{setCartView(true)}}>
           My Cart {" "}
           <Badge pill bg="danger">{data.length}</Badge>
         </div>
